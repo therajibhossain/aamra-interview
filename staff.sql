@@ -97,3 +97,16 @@ SET @sql = CONCAT('SELECT role,', @sql, '
 PREPARE stmt FROM @sql;
 EXECUTE stmt;
 DEALLOCATE PREPARE stmt;
+
+
+
+--alternatively
+$employees = \DB::table('staff')
+                ->groupBy('role')
+                ->get()
+                ->map(function($data){
+                    return \DB::table('staff')
+                      ->where('name', $data->name)
+                      ->groupBy('created_at')
+                      ->get();
+                });
