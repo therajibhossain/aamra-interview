@@ -1,0 +1,36 @@
+
+INPUT DATA(db employees table)
+********************************
+Date	|	Role	|	Name
+---------------------------------------
+01/03/2022	Manager		Kamal
+01/03/2022	Sr. Manager	Jamal
+01/03/2022	Deptuty Manager	John
+05/03/2022	Manager		Kamal
+05/03/2022	Sr. Manager	Jamal
+05/03/2022	Deputy Manager	John
+
+
+
+
+
+
+QUESTION 01. OUTPUT(MySQL)
+**************************************
+Role	|	01/03/2022	|	05/03/2022
+--------------------------------------------------
+Manager		Kamal		Kamal
+Sr. Manager	Jamal		Jamal
+Deptuty Manager	John		John
+
+
+
+
+
+QUESTION 02. OUTPUT(MySQL)
+**************************************
+Role	|	01/03/2022	| 	02/03/2022	| 03/03/2022	|	04/03/2022	|	05/03/2022
+------------------------------------------------------------------------------------------------------------------
+Manager		Kamal			-			-		-			Kamal	
+Sr. Manager	Jamal			-			-		-			Jamal
+Deptuty Manager	John			-			-		-			John
